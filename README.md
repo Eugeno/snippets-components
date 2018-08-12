@@ -1,3 +1,4 @@
 - [Calculating the scrollbar width](scrollbar-width)
 - [Work with potentially non-existent data in object](potentially-non-existent-data)
 - [Tabs](tabs)
+- [Modal](modal)
