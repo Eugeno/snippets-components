@@ -1,7 +1,7 @@
 ## Usage
 ### 1. Include
 ```html
-<link rel="stylesheet" href="path.to/modal.css">
+<link rel="stylesheet" href="path/to/modal.css">
 
 <script src="path/to/modal.js"></script>
 ```

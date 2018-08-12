@@ -1,7 +1,7 @@
 ## Usage
 ### 1. Include
 ```html
-<link rel="stylesheet" href="path.to/tabs.css">
+<link rel="stylesheet" href="path/to/tabs.css">
 
 <script src="path/to/tabs.js"></script>
 ```
