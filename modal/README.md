@@ -14,7 +14,7 @@ import Modal from "path/to/modal"
 ```html
 <div class="modal">
   <div class="modal__overlay"></div>
-  <div class="modal__body details">
+  <div class="modal__body">
     <button class="modal__close">
       Close
     </button>
@@ -29,7 +29,7 @@ const modal = new Modal('.modal')
 ```
 
 ## How to use
-After creating an instance you can activate modal by `modal.open()` and close it by `modal.close()` or by clicking on the overlay, close button. Also, you can use Esc key and Enter key on the close button.
+After creating an instance you can activate modal by `modal.open()` and close it by `modal.close()` or by clicking on the overlay or close button. Also, you can use Esc key and Enter key on the close button.
 
 First parameter can be either string (selector) or node element. Second parameter is an object with options.
 ```javascript
