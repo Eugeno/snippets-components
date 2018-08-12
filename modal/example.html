@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Modal example</title>
+
+  <link rel="stylesheet" href="./css/modal.css">
+</head>
+<body>
+  <button class="open-modal" type="button">
+    Open modal
+  </button>
+
+  <div class="modal">
+    <div class="modal__overlay"></div>
+    <div class="modal__body details">
+      <button class="modal__close">
+        Close
+      </button>
+      Body of modal<br>
+      Body of modal<br>
+      Body of modal<br>
+    </div>
+  </div>
+
+  <script src="./js/modal.js"></script>
+  <script>
+    const modal = new Modal('.modal')
+    const openModalBtn = document.querySelector('.open-modal')
+    openModalBtn.addEventListener('click', modal.open)
+  </script>
+</body>
+</html>
