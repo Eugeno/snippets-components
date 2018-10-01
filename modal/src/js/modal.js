@@ -48,12 +48,7 @@ class Modal {
   }
 
   _onKeyDown (evt) {
-    const KeyCodes = {
-      ENTER: 13,
-      ESCAPE: 27,
-    }
-
-    if ((evt.target === this.modalClose && evt.keyCode === KeyCodes.ENTER) || evt.keyCode === KeyCodes.ESCAPE) {
+    if ((evt.target === this.modalClose && evt.key === 'Enter') || evt.key === 'Escape') {
       this.close()
     }
   }
