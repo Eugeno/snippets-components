@@ -11,23 +11,23 @@ class Tabs {
   }
 
   init () {
-    const tabsContainers = [...document.querySelectorAll('[data-tabs]')]
+    const tabsContainers = document.querySelectorAll('[data-tabs]')
     tabsContainers.forEach((tabsContainer, i) => {
-      const tabs = [...tabsContainer.querySelectorAll('[data-tab]')]
+      const tabs = tabsContainer.querySelectorAll('[data-tab]')
       const tabsContent = tabsContainer.dataset.tab ?
         document.querySelector(`[data-tabs-content=${tabsContainer.dataset.tab}]`) :
-        [...document.querySelectorAll('[data-tabs-content]')][i]
+        document.querySelectorAll('[data-tabs-content]')[i]
 
       const tabsMap = new Map()
       tabs.forEach((tab, j) => {
         const tabContent = tab.dataset.tab ?
           tabsContent.querySelector(`[data-tab=${tab.dataset.tab}]`) :
-          [...tabsContent.querySelectorAll('[data-tab]')][j]
+          tabsContent.querySelectorAll('[data-tab]')[j]
         tabsMap.set(tab, tabContent)
       })
 
-      tabsContainer.addEventListener('click', (event) => {
-        let target = event.target
+      tabsContainer.addEventListener('click', (evt) => {
+        let target = evt.target
         while (!target.hasAttribute('data-tab')) {
           target = target.parentNode
         }
@@ -43,7 +43,7 @@ class Tabs {
 
   switch (target, tabsMap) {
     for (let [tab, tabsContent] of tabsMap) {
-      tab.classList.remove(this.settings.hiddenClass)
+      tab.classList.remove(this.settings.activeClass)
       tabsContent.classList.add(this.settings.hiddenClass)
     }
 
