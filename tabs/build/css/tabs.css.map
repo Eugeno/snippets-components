@@ -1,1 +1,1 @@
-{"version":3,"sources":["tabs.css"],"names":[],"mappings":"AAAA,W,CACE,Y","file":"tabs.css","sourcesContent":["._is-hidden {\n  display: none;\n}"]}
+{"version":3,"sources":["tabs.css"],"names":[],"mappings":"AAEA,W,CACE,Y","file":"tabs.css","sourcesContent":["\n\n._is-hidden {\n  display: none;\n}"]}

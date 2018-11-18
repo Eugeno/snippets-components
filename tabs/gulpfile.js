@@ -1,5 +1,4 @@
 const gulp = require('gulp')
-const sass = require('gulp-sass')
 const concatCss = require('gulp-concat-css')
 const del = require('del')
 const plumber = require('gulp-plumber')
@@ -16,7 +15,7 @@ const uglify = require('gulp-uglify-es').default
 
 const paths = {
   styles: {
-    src: 'src/scss/tabs.scss',
+    src: 'src/css/tabs.css',
     dest: 'build/css'
   },
   scripts: {
@@ -29,7 +28,6 @@ const styles = () => {
   return gulp.src(paths.styles.src)
   .pipe(plumber())
   .pipe(sourcemaps.init())
-  .pipe(sass())
   .pipe(concatCss('tabs.css'))
   .pipe(autoprefixer({
     browsers: ['>1%, not op_mini all']
@@ -114,7 +112,7 @@ const serve = gulp.series(assemble, () => {
 
   gulp.watch('*.html', htmlWatch)
   gulp.watch('src/js/**/*.js', jsWatch)
-  gulp.watch('src/scss/**/*.scss', cssWatch)
+  gulp.watch('src/css/**/*.css', cssWatch)
 })
 
 gulp.task('serve', serve)
