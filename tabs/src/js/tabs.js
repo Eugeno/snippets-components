@@ -28,11 +28,13 @@ class Tabs {
 
       tabsContainer.addEventListener('click', (evt) => {
         let target = evt.target
-        while (!target.hasAttribute('data-tab')) {
-          target = target.parentNode
-        }
+        if (target !== tabsContainer) {
+          while (!target.hasAttribute('data-tab')) {
+            target = target.parentNode
+          }
 
-        this.switch(target, tabsMap)
+          this.switch(target, tabsMap)
+        }
       })
 
       if (!tabsContainer.querySelector(`[data-tab].${this.settings.activeClass}`)) {
