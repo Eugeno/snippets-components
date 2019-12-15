@@ -1,8 +1,6 @@
 ## Usage
 ### 1. Include
 ```html
-<link rel="stylesheet" href="path/to/tabs.css">
-
 <script src="path/to/tabs.js"></script>
 ```
 Or import
@@ -39,7 +37,7 @@ const tabs = new Tabs()
 ## Features
 Containers and tabs are binding to each other in the order they follow, but you can associate them by name.
 
-By default, the first tab becomes active, but you can set any one by adding the necessary classes.
+By default, the first tab becomes active, but you can set any one by adding the necessary class and `hidden` attribute.
 
 ```html
 <ul data-tabs="tabs-name">
@@ -55,7 +53,7 @@ By default, the first tab becomes active, but you can set any one by adding the 
   <div data-tab="tab-1">
     Content for the first tab
   </div>
-  <div class="_is-hidden" data-tab="tab-2">
+  <div data-tab="tab-2" hidden>
     Content for the second tab
   </div>
 </div>
@@ -68,4 +66,3 @@ You can insert tabs into each other.
 | Option | Type | Description |
 | --- | --- | --- |
 | `activeClass` | String | Default: `'_is-active'`. <br> Class for active tab switcher. |
-| `hiddenClass` | String | Default: `'_is-hidden'`. <br> Class for not active tab content. |

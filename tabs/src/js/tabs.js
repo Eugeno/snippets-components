@@ -2,7 +2,6 @@ class Tabs {
   constructor (options) {
     const defaults = {
       activeClass: '_is-active',
-      hiddenClass: '_is-hidden',
     }
 
     this.settings = Object.assign({}, defaults, options)
@@ -46,11 +45,11 @@ class Tabs {
   switch (target, tabsMap) {
     for (let [tab, tabsContent] of tabsMap) {
       tab.classList.remove(this.settings.activeClass)
-      tabsContent.classList.add(this.settings.hiddenClass)
+      tabsContent.hidden = true
     }
 
     target.classList.add(this.settings.activeClass)
-    tabsMap.get(target).classList.remove(this.settings.hiddenClass)
+    tabsMap.get(target).hidden = false
   }
 }
 
